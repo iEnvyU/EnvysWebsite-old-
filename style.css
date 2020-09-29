@@ -1,4 +1,46 @@
-h1,h2,h3 {color:white;}
-p {color:white;}
-body {background-color:black;}
-ul,ol {color: white;}
+h1, h2, h3 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+ul, ol {
+    color: white;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    padding: .5em 2em;
+}
+
+header nav {
+    flex: 1;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header nav ul li {
+    border-left: 2px solid white;
+    padding-left: 1em;
+}
+
+header nav ul li:not(:first-child) {
+    margin-left: 1em;
+}
+
+header nav ul li:last-child {
+    border-right: 2px solid white;
+    margin-right: 1em;
+    padding-right: 1em;
+}
