@@ -44,3 +44,7 @@ header nav ul li:last-child {
     margin-right: 1em;
     padding-right: 1em;
 }
+
+a, a:visited {
+  color: #3391ff;
+}
