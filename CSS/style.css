@@ -1,0 +1,46 @@
+/* Color pallet 
+text - #DEB992
+links - buttons #1BA098
+body - #051622 */
+
+h1, h2, h3, p, ul, ol, a {
+    color: #DEB992;
+}
+
+body {
+    background-color: #051622;
+    padding: 0;
+}
+
+main {text-align: center;}
+main ul {list-style: none;
+        position: relative;
+        right: 23.5px;}
+
+header {
+    align-items: center;
+    display: flex;
+}
+
+header nav { flex: 1; }
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header nav ul li:not(:first-child) { margin-left: 1.5em; }
+
+header nav ul li:last-child { margin-right: 1.5em; }
+
+a:hover { color: #1BA098; }
+
+#BROKEN { text-align: center; }
+
+#discord-widget { 
+    display: flex; 
+    justify-content: flex-end;
+    position:relative; 
+    top: -270px;
+}
