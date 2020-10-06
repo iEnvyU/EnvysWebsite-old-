@@ -42,5 +42,11 @@ a:hover { color: #1BA098; }
     display: flex; 
     justify-content: flex-end;
     position:relative; 
-    top: -270px;
+    top: -280px;
+}
+
+@media (max-width: 1350px) {
+    main > div:not(.discord-widget) {
+        padding-right: 300px;
+    }
 }
