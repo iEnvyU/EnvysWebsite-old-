@@ -1,28 +1,28 @@
-h1, h2, h3 {
-    color: white;
-}
+/* Color pallet 
+text - #DEB992
+links - buttons #1BA098
+body - #051622 */
 
-p {
-    color: white;
+h1, h2, h3, p, ul, ol, a {
+    color: #DEB992;
 }
 
 body {
-    background-color: black;
+    background-color: #051622;
+    padding: 0;
 }
 
-ul, ol {
-    color: white;
-}
+main {text-align: center;}
+main ul {list-style: none;
+        position: relative;
+        right: 23.5px;}
 
 header {
     align-items: center;
     display: flex;
-    padding: .5em 2em;
 }
 
-header nav {
-    flex: 1;
-}
+header nav { flex: 1; }
 
 header nav ul {
     display: flex;
@@ -30,21 +30,17 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li {
-    border-left: 2px solid white;
-    padding-left: 1em;
-}
+header nav ul li:not(:first-child) { margin-left: 1.5em; }
 
-header nav ul li:not(:first-child) {
-    margin-left: 1em;
-}
+header nav ul li:last-child { margin-right: 1.5em; }
 
-header nav ul li:last-child {
-    border-right: 2px solid white;
-    margin-right: 1em;
-    padding-right: 1em;
-}
+a:hover { color: #1BA098; }
 
-a, a:visited {
-  color: #3391ff;
+#BROKEN { text-align: center; }
+
+#discord-widget { 
+    display: flex; 
+    justify-content: flex-end;
+    position:relative; 
+    top: -270px;
 }
