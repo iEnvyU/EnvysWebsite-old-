@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Envy's Website </title>
-        <link rel="stylesheet" href="style.css">
+        <title> Login </title>
+        <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
+        <!-- Header -->
+        <header>
+            <img src="IMAGES/me hoy minoy.jpg" height="5%" width="5%"/>
+            <h1 style="margin-left: 1em; text-align: center;">Login!</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Main -->
         <main>
-            <header>
-                <img src="me hoy minoy.jpg" height="5%" width="5%"/>
-                <h1 style="margin-left: 1em; text-align: center;">Login!</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                </nav>
-            </header>
-
             <hr width="75%">
-            
+            <h3 id="BROKEN">(CURRENTLY BROKEN)</h3>
             <div>
                 <h3 style="text-align: center;"> Login </h3>
                 <form style="text-align: center;" action="url" method="POST">
                     <input type="text" name="username" /><br />
                     <input type="password" name="password" /><br />
-                    <input type="checkbox" name="rememberPassword" value="1"> <span style="color: white;"> Remember My Password </span> <br />
-                    <input type="submit" value="Login">
+                    <label style="color: white;"> 
+                        <input type="checkbox" name="rememberPassword" value="1"/> 
+                        Remember My Password
+                    </label> <br />
+                    <input type="submit" value="Login"/>
                 </form>
             </div>
-        </main>
-        <footer>
             <hr width="75%">
+        </main>
+        <!-- Footer -->
+        <footer>
             <li><a href="#">Place Holder Footer Link(S)</a></li>
         </footer>
     </body>
