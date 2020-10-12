@@ -3,7 +3,7 @@ text - #DEB992
 links - buttons #1BA098
 body - #051622 */
 
-h1, h2, h3, p, ul, ol, a {
+h1, h2, h3, p, ul, ol, a, li {
     color: #DEB992;
 }
 
@@ -12,7 +12,7 @@ body {
     padding: 0;
 }
 
-main {text-align: center;}
+main { position: relative; text-align: center;}
 main ul {list-style: none;
         position: relative;
         right: 23.5px;}
@@ -34,6 +34,10 @@ header nav ul li:not(:first-child) { margin-left: 1.5em; }
 
 header nav ul li:last-child { margin-right: 1.5em; }
 
+/* foorter {
+ 
+} */
+
 a:hover { color: #1BA098; }
 
 #BROKEN { text-align: center; }
@@ -41,8 +45,9 @@ a:hover { color: #1BA098; }
 #discord-widget { 
     display: flex; 
     justify-content: flex-end;
-    position:relative; 
-    top: -280px;
+    position: absolute;
+    width: 100%;
+    top: 0;
 }
 
 @media (max-width: 1350px) {
