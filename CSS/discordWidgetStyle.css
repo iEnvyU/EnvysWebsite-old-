@@ -1,0 +1,13 @@
+#discord-widget { 
+    display: flex; 
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+@media (max-width: 1350px) {
+    main > div:not(.discord-widget) {
+        padding-right: 300px;
+    }
+}

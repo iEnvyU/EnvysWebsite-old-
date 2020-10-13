@@ -34,24 +34,11 @@ header nav ul li:not(:first-child) { margin-left: 1.5em; }
 
 header nav ul li:last-child { margin-right: 1.5em; }
 
+a:hover { color: #1BA098; }
+
 /* foorter {
  
 } */
 
-a:hover { color: #1BA098; }
-
 #BROKEN { text-align: center; }
 
-#discord-widget { 
-    display: flex; 
-    justify-content: flex-end;
-    position: absolute;
-    width: 100%;
-    top: 0;
-}
-
-@media (max-width: 1350px) {
-    main > div:not(.discord-widget) {
-        padding-right: 300px;
-    }
-}
