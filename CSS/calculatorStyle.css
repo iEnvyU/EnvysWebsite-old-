@@ -16,6 +16,11 @@ input[type=button]{
     height: 100%;
 } 
 
+p{
+    position: relative;
+    top: 200px;
+}
+
 #calculator {
     text-align: center;
     position: relative;

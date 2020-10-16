@@ -23,41 +23,40 @@
         <main>
             <div>
                 <form id="calculator">
-                    <h2 style="text-align: center;">Calculator</h2> 
+                    <h2 style="text-align: center;">Calculator</h2>
                     <table border="0">
                         <tr>
                             <td colspan="3">
-                                <input type="text" name="input" readonly/><br />
+                                <input type="text" name="input" id="txtBox"/><br />
                             </td>
-                            <td><input type="button" value="del"/></td>
+                            <td><input type="button" onclick="DelButton()" value="del"/></td>
                         </tr>
                         <tr>
-                            <td><input type="button" value="1"/></td>
-                            <td><input type="button" value="2"/></td>
-                            <td><input type="button" value="3"/></td>
-                            <td><input type="button" value="+"/></td>
+                            <td><input type="button" onclick="NumberButtons('1')" value="1"/></td>
+                            <td><input type="button" onclick="NumberButtons('2')" value="2"/></td>
+                            <td><input type="button" onclick="NumberButtons('3')" value="3"/></td>
+                            <td><input type="button" onclick="OperatorButtons('+')" value="+" /></td>
                         </tr>
                         <tr>
-                            <td><input type="button" value="4"/></td>
-                            <td><input type="button" value="5"/></td>
-                            <td><input type="button" value="6"/></td>
-                            <td><input type="button" value="-"/></td>
+                            <td><input type="button" onclick="NumberButtons('4')" value="4"/></td>
+                            <td><input type="button" onclick="NumberButtons('5')" value="5"/></td>
+                            <td><input type="button" onclick="NumberButtons('6')" value="6"/></td>
+                            <td><input type="button" onclick="OperatorButtons('-')" value="-"/></td>
                         </tr>
                         <tr>
-                            <td><input type="button" value="7"/></td>
-                            <td><input type="button" value="8"/></td>
-                            <td><input type="button" value="9"/></td>
-                            <td><input type="button" value="*"/></td>
+                            <td><input type="button" onclick="NumberButtons('7')" value="7"/></td>
+                            <td><input type="button" onclick="NumberButtons('8')" value="8"/></td>
+                            <td><input type="button" onclick="NumberButtons('9')" value="9"/></td>
+                            <td><input type="button" onclick="OperatorButtons('*')" value="*"/></td>
                         </tr>
                         <tr>
-                            <td><input type="button" value="."/></td>
-                            <td><input type="button" value="0"/></td>
-                            <td><input type="button" value="="/></td>
-                            <td><input type="button" value="/"/></td>
+                            <td><input type="button" onclick="DecimalButton('.')" value="."/></td>
+                            <td><input type="button" onclick="NumberButtons('0')" value="0"/></td>
+                            <td><input type="button" onclick="OperationButton('=')" value="="/></td>
+                            <td><input type="button" onclick="OperatorButtons('/')" value="/"/></td>
                         </tr>
                     </table>
-                </form> 
-                <p id="demo"></p>
+                </form>
             </div>
         </main>
         <!-- Footer -->
