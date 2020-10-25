@@ -3,16 +3,14 @@ text - #DEB992
 links - buttons #1BA098
 body - #051622 */
 
-h1, h2, h3, p, ul, ol, a, li {
-    color: #DEB992;
-}
+* { color: #DEB992; }
 
 body {
     background-color: #051622;
     padding: 0;
 }
 
-main { position: relative; text-align: center;}
+main { position: relative; text-align: center; }
 main ul {list-style: none;
         position: relative;
         right: 23.5px;}
