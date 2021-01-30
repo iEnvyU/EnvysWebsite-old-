@@ -1,7 +1,6 @@
 var CheckForVariable = false;
-var VariableExists  = false;
 const variables = ['+', '-', '*', '/'];
-const numbers = ['1','2','3','4','5','6','7','8','9',]
+const numbers = ['0','1','2','3','4','5','6','7','8','9']
 
 function NumberButtons(val) {
         if(!document.getElementById("txtBox").value.includes('='))
@@ -12,8 +11,8 @@ function NumberButtons(val) {
 
 function OperatorButtons(val) {
         if(document.getElementById("txtBox").value.includes('='))
-                return
-                
+                return;
+
         let z = document.getElementById("txtBox").value.slice(-1);
 
         for(let item of numbers)
@@ -27,8 +26,22 @@ function DecimalButton(val) {
 }
 
 function OperationButton(val) {
-        let y = document.getElementById("txtBox").value;
-        let z = eval(y);
+        let y;
+        let z;
+
+        try {
+                y = document.getElementById("txtBox").value;
+                z = eval(y);
+
+                if(z == Infinity)
+                        throw new Error("Divide By Zero Exception");
+        } 
+
+        catch (err) {
+                console.error(err);
+                document.getElementById("txtBox").value = y + "=0";
+                return;
+        }
 
         for(let item of variables)
                 if (document.getElementById("txtBox").value.includes(item))
@@ -40,15 +53,10 @@ function OperationButton(val) {
                 document.getElementById("txtBox").value = "ERROR";
 
         CheckForVariable = false;
-        VariableExists = false;
 }
 
 function DelButton() {
-        const txtBox = document.getElementById("txtBox"); 
-
-        for(let item of variables)
-                if (document.getElementById("txtBox").value.includes(item))
-                        VariableExists = false;
+        const txtBox = document.getElementById("txtBox");
 
         if(txtBox.value.length > 0)
                 txtBox.value = txtBox.value.substring(0, txtBox.value.length - 1);
@@ -56,8 +64,3 @@ function DelButton() {
         if(txtBox.value.includes('=') || txtBox.value.includes('E'))
                 txtBox.value = "";
 }
-
-
-
-/* NOTES - was working on how to be able to use multiple vatiables in a sigle equation! 
-        also try to stop using eval for your equeations :D */
