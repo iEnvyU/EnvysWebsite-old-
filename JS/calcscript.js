@@ -26,22 +26,15 @@ function DecimalButton(val) {
 }
 
 function OperationButton(val) {
-        let y;
-        let z;
+        let y = document.getElementById("txtBox").value;
+        let z = eval(y);
 
-        try {
-                y = document.getElementById("txtBox").value;
-                z = eval(y);
-
-                if(z == Infinity)
-                        throw new Error("Divide By Zero Exception");
-        } 
-
-        catch (err) {
-                console.error(err);
+        if(z == Infinity)
+        {
                 document.getElementById("txtBox").value = y + "=0";
+                window.alert("Error: Divided By Zero.");
                 return;
-        }
+        }                                                                                                                                                                                                                               
 
         for(let item of variables)
                 if (document.getElementById("txtBox").value.includes(item))
