@@ -1,12 +1,12 @@
 var CheckForVariable = false;
-const variables = ['+', '-', '*', '/'];
+const variables = ['+', '-', '*', '/', '.'];
 const numbers = ['0','1','2','3','4','5','6','7','8','9']
 
 function NumberButtons(val) {
-        if(!document.getElementById("txtBox").value.includes('=') && !document.getElementById("txtBox").value.includes('E'))
-                document.getElementById("txtBox").value += val;
-        else 
+        if(document.getElementById("txtBox").value.includes('=') && document.getElementById("txtBox").value.includes('E'))
                 document.getElementById("txtBox").value = "" + val;
+        else 
+                document.getElementById("txtBox").value += val;
 }
 
 function OperatorButtons(val) {
@@ -21,8 +21,14 @@ function OperatorButtons(val) {
 }
 
 function DecimalButton(val) {
-        if(!document.getElementById("txtBox").value.includes('=') && !document.getElementById("txtBox").value.includes('E'))
-                document.getElementById("txtBox").value += val; 
+        if(document.getElementById("txtBox").value.includes('=') && document.getElementById("txtBox").value.includes('E'))
+                document.getElementById("txtBox").value = "" + val;
+
+        let z = document.getElementById("txtBox").value.slice(-1);
+
+        for(let item of numbers)
+                if(z.includes(item))
+                        document.getElementById("txtBox").value += val;
 }
 
 function OperationButton(val) {
