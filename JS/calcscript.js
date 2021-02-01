@@ -1,9 +1,9 @@
 var CheckForVariable = false;
-const variables = ['+', '-', '*', '/', '.'];
+const variables = ['+', '-', '*', '/'];
 const numbers = ['0','1','2','3','4','5','6','7','8','9']
 
 function NumberButtons(val) {
-        if(document.getElementById("txtBox").value.includes('=') && document.getElementById("txtBox").value.includes('E'))
+        if(document.getElementById("txtBox").value.includes('=') || document.getElementById("txtBox").value.includes('E'))
                 document.getElementById("txtBox").value = "" + val;
         else 
                 document.getElementById("txtBox").value += val;
@@ -21,7 +21,7 @@ function OperatorButtons(val) {
 }
 
 function DecimalButton(val) {
-        if(document.getElementById("txtBox").value.includes('=') && document.getElementById("txtBox").value.includes('E'))
+        if(document.getElementById("txtBox").value.includes('=') || document.getElementById("txtBox").value.includes('E'))
                 document.getElementById("txtBox").value = "" + val;
 
         let z = document.getElementById("txtBox").value.slice(-1);
@@ -32,24 +32,30 @@ function DecimalButton(val) {
 }
 
 function OperationButton(val) {
+        
+        if(document.getElementById("txtBox").value == "Error" || document.getElementById("txtBox").value.includes('='))
+                return;
+
         let y = document.getElementById("txtBox").value;
         let z = eval(y);
 
         if(z == "Infinity")
         {
-                document.getElementById("txtBox").value = y + "=0";
-                window.alert("Error: Divided By Zero.");
+                document.getElementById("txtBox").value = "Error";
                 return;
         }
 
-        for(let item of variables)
+        if(y.includes("0/0"))
+                document.getElementById("txtBox").value = "Error";
+
+        for(let item of numbers)
                 if (document.getElementById("txtBox").value.includes(item))
                         CheckForVariable = true;
-
+        
         if(CheckForVariable === true)
                 document.getElementById("txtBox").value += val += z;
         else
-                document.getElementById("txtBox").value = "ERROR";
+                document.getElementById("txtBox").value = "Error";
 
         CheckForVariable = false;
 }
