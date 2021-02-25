@@ -1,6 +1,7 @@
 //Data Field
 const variables = ['+', '-', '*', '/'];
 const numbers = ['0','1','2','3','4','5','6','7','8','9'];
+let DecimalUsed = false;
 
 function NumberButtons(val) {
         //If Text Box Contains A Completed Equation Or An Error, Reset And Continue. Else Continue
@@ -21,15 +22,21 @@ function OperatorButtons(val) {
                 
         //Function Call
         CheckForNumber(val);
+
+        DecimalUsed = false;
 }
 
 function DecimalButton(val) {
         //If Text Box Contains A Completed Equation Or An Error, Reset And Continue.
         if(document.getElementById("txtBox").value.includes('=') || document.getElementById("txtBox").value.includes('E'))
-                document.getElementById("txtBox").value = "" + val;
+                        document.getElementById("txtBox").value = "" + val;
 
-        //Function Call
-        CheckForNumber(val);
+        //checks if theres been a decimal used, if not then continue.
+        if(DecimalUsed == false)
+        {
+                CheckForNumber(val);
+                DecimalUsed = true;
+        }
 }
 
 function OperationButton(val) {
@@ -49,7 +56,7 @@ function OperationButton(val) {
         }
 
         //Error Checking For Zero Divided By Zero
-        if(y.includes("0/0"))
+        if(y == ("0/0"))
                 document.getElementById("txtBox").value = "Error";
        
         //To Find If The Equation Contains A Variable then evaluates the Equation
