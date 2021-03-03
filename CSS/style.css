@@ -4,221 +4,23 @@ links - buttons #1BA098
 body - #051622 */
 
 * { color: #DEB992; }
-a:hover { color: #1BA098; }
 
-
-/*Body*/
 body {
     background-color: #051622;
-    background-color: #071c2b;
-}
-
-main { 
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
-.container {
-    width: 1100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
+main { position: relative; text-align: center; }
+main ul {list-style: none;
+        position: relative;
+        right: 23.5px;}
 
-.container .card {
-    position: relative;
-    width: 300;
-    height: 400;
-    background: #071c2b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.2);
-    overflow: hidden;
-}
-
-.container:hover .card {
-    opacity: 0.2;
-}
-.container .card:hover {
-    opacity: 1;
-}
-
-.container .card::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    bottom: 2px;
-    width: 50%;
-    background: rgba(255,255,255,0.1);
-    pointer-events: none;
-}
-
-.container .card .content {
-    padding: 30px;
-    text-align: center;
-}
-
-.container .card .content h2 {
-    position: absolute;
-    right: 30px;
-    font-size: 4em;
-    font-weight: 800;
-    color:cornflowerblue;
-    z-index: 1;
-    opacity: 0.1;
-    transition: 0.5s;
-}
-
-.container .card:hover .content h2 {
-    opacity: 1;
-    transform: translateY(-70px);
-}
-
-.container .card .content h3 {
-    position: relative;
-    font-size: 1.5em;
-    color: #DEB992;
-    z-index: 2;
-    opacity: 0.5;
-    letter-spacing: 1px;
-    transition: 0.5s;
-}
-
-.container .card .content p {
-    position: relative;
-    font-size: 1em;
-    color: #DEB992;
-    z-index: 2;
-    opacity: 0.5;
-    font-weight: 300;
-    transition: 0.5s;
-}
-
-.container .card:hover .content h3,
-.container .card:hover .content p {
-    opacity: 1;
-}
-
-.container .card .content a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 15px;
-    background: white;
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.container .card span {
-    transition: 0.5;
-    opacity: 0;
-}
-
-.container .card:hover span {
-    opacity: 1;
-}
-
-.container .card span:nth-child(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, transparent, blue);
-    animation: animate1 2s linear infinite;
-}
-@keyframes animate1 {
-    0%
-    {
-        transform: translateX(-100%);
-    }
-    100%
-    {
-        transform: translateX(100%);
-    }
-}
-
-.container .card span:nth-child(2) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent, blue);
-    animation: animate2 2s linear infinite;
-    animation-delay: 1s;
-}
-@keyframes animate2 {
-    0%
-    {
-        transform: translateY(-100%);
-    }
-    100%
-    {
-        transform: translateY(100%);
-    }
-}
-
-.container .card span:nth-child(3) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to left, transparent, blue);
-    animation: animate3 2s linear infinite;
-}
-@keyframes animate3 {
-    0%
-    {
-        transform: translateX(100%);
-    }
-    100%
-    {
-        transform: translateX(-100%);
-    }
-}
-
-.container .card span:nth-child(4) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(to top, transparent, blue);
-    animation: animate4 2s linear infinite;
-    animation-delay: 1s;
-}
-@keyframes animate4 {
-    0%
-    {
-        transform: translateY(100%);
-    }
-    100%
-    {
-        transform: translateY(-100%);
-    }
-}
-
-/*Header*/
 header {
     align-items: center;
     display: flex;
 }
 
-header nav { 
-    flex: 1; 
-}
+header nav { flex: 1; }
 
 header nav ul {
     display: flex;
@@ -226,13 +28,11 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li:not(:first-child) { 
-    margin-left: 1.5em; 
-}
+header nav ul li:not(:first-child) { margin-left: 1.5em; }
 
-header nav ul li:last-child { 
-    margin-right: 1.5em; 
-}
+header nav ul li:last-child { margin-right: 1.5em; }
+
+a:hover { color: #1BA098; }
 
 /* foorter {
  
