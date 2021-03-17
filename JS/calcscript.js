@@ -12,6 +12,8 @@ function NumberButtons(val) {
 }
 
 function OperatorButtons(val) {
+        DecimalUsed = false;
+
         //If Equation Is Complete Do nothing
         if(document.getElementById("txtBox").value.includes('='))
                 return;
@@ -22,8 +24,6 @@ function OperatorButtons(val) {
                 
         //Function Call
         CheckForNumber(val);
-
-        DecimalUsed = false;
 }
 
 function DecimalButton(val) {
@@ -61,8 +61,11 @@ function OperationButton(val) {
        
         //To Find If The Equation Contains A Variable then evaluates the Equation
         for(let item of variables)
-                 if (document.getElementById("txtBox").value.includes(item))
+                if (document.getElementById("txtBox").value.includes(item))
+                {
                         document.getElementById("txtBox").value = y + val + z;
+                        DecimalUsed = false; 
+                }
 }
 
 function DelButton() {
