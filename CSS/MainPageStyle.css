@@ -9,7 +9,7 @@ a:hover { color: #1BA098; }
 
 /*Body*/
 body {
-    background-color: #051622; 
+    background-color: #051622;
 }
 
 main { 
@@ -23,17 +23,16 @@ main {
 }
 
 .container {
-    width: 1100px;
+    width: 1250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .container .card {
     position: relative;
-    width: 300;
-    height: 400;
+    width: 500px;
+    height: 325px;
     background: #071c2b;
     display: flex;
     justify-content: center;
